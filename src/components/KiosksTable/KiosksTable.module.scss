@@ -1,0 +1,21 @@
+.main {
+  width: 90%;
+
+  .userLabels {
+    margin: var(--g-spacing-half);
+  }
+
+  .people {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .actionButtons {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      margin-bottom: var(--g-spacing-1);
+    }
+  }
+}

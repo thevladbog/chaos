@@ -1,0 +1,13 @@
+{
+  "kiosks": {
+    "id": "id",
+    "name": "Kiosk's name",
+    "type": "Type",
+    "admins": "Administrators",
+    "supervisors": "Supervisors",
+    "edit": "Edit kiosk",
+    "title": "Kiosk's table",
+    "titleId": "Info about kiosk # {{id}}",
+    "delete": "Delete kiosk"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "navigation": {
+    "home": "Home",
+    "kiosk": "Kiosks",
+    "changelog": "Changelog",
+    "logout": "Log Out"
+  }
+}
