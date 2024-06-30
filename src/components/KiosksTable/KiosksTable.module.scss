@@ -12,10 +12,12 @@
 
   .actionButtons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     button {
       margin-bottom: var(--g-spacing-1);
+      margin-right: var(--g-spacing-2);
     }
   }
 }

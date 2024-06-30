@@ -17,6 +17,7 @@ import styles from './KiosksTable.module.scss';
 
 type KioskDataType = {
   id: string;
+  number: string;
   name: string;
   type: string;
   admins: UserType[];
@@ -26,6 +27,7 @@ type KioskDataType = {
 const MOCK_DATA: KioskDataType[] = [
   {
     id: '1',
+    number: 'SD-1',
     name: 'Midory',
     type: 'SD',
     admins: [MOCK_ADMIN, MOCK_USER_1],
@@ -34,6 +36,7 @@ const MOCK_DATA: KioskDataType[] = [
   {
     id: '2',
     name: 'Midory 2',
+    number: 'HR-10',
     type: 'HR',
     admins: [MOCK_ADMIN, MOCK_USER_1],
     supervisors: [FIRST_GROUP],
@@ -56,6 +59,11 @@ export const KiosksTable = (): React.ReactNode => {
     {
       id: 'name',
       name: i18nKiosk('name'),
+      align: 'start',
+    },
+    {
+      id: 'number',
+      name: i18nKiosk('number'),
       align: 'start',
     },
     {
@@ -115,7 +123,7 @@ export const KiosksTable = (): React.ReactNode => {
     {
       id: 'edit',
       name: i18nKiosk('edit'),
-      align: 'center',
+      align: 'start',
       template: (item) => {
         return (
           <div className={styles.actionButtons}>
@@ -143,11 +151,13 @@ export const KiosksTable = (): React.ReactNode => {
       },
     },
   ];
-  tableColumns[0].width = '5%';
+
   tableColumns[1].width = '10%';
-  tableColumns[2].width = '8%';
-  tableColumns[3].width = '30%';
-  tableColumns[4].width = '45%';
+  tableColumns[2].width = '10%';
+  tableColumns[3].width = '3%';
+  tableColumns[4].width = '35%';
+  tableColumns[5].width = '25%';
+  tableColumns[6].width = '20%';
 
   return (
     <div className={styles.main}>
