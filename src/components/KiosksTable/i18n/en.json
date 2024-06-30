@@ -8,6 +8,8 @@
     "edit": "Edit kiosk",
     "title": "Kiosk's table",
     "titleId": "Info about kiosk # {{id}}",
-    "delete": "Delete kiosk"
+    "delete": "Delete kiosk",
+    "new": "New kiosk",
+    "searchPlaceholder": "Type here for search ..."
   }
 }

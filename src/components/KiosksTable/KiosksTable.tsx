@@ -1,5 +1,12 @@
 import React from 'react';
-import { Table, TableColumnConfig, Button, UserLabel } from '@gravity-ui/uikit';
+import {
+  Table,
+  TableColumnConfig,
+  Button,
+  UserLabel,
+  Pagination,
+  PaginationProps,
+} from '@gravity-ui/uikit';
 
 import { i18nKiosk } from './i18n';
 
@@ -34,7 +41,11 @@ const MOCK_DATA: KioskDataType[] = [
 ];
 
 export const KiosksTable = (): React.ReactNode => {
+  const [state, setState] = React.useState({ page: 1, pageSize: 100 });
   const navigate = useNavigate({ from: '/kiosks' });
+
+  const handleUpdate: PaginationProps['onUpdate'] = (page, pageSize) =>
+    setState((prevState) => ({ ...prevState, page, pageSize }));
 
   const tableColumns: TableColumnConfig<KioskDataType>[] = [
     {
@@ -141,6 +152,15 @@ export const KiosksTable = (): React.ReactNode => {
   return (
     <div className={styles.main}>
       <Table columns={tableColumns} data={MOCK_DATA} verticalAlign="middle" />
+      <Pagination
+        page={state.page}
+        pageSize={state.pageSize}
+        total={1000}
+        onUpdate={handleUpdate}
+        showInput={true}
+        showPages={true}
+        compact={false}
+      />
     </div>
   );
 };

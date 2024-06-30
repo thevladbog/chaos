@@ -3,4 +3,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: var(--g-spacing-6);
+    margin-top: var(--g-spacing-5);
+
+    button {
+      font-weight: var(--g-text-subheader-font-weight);
+      font-size: var(--g-text-subheader-3-font-size);
+    }
+
+    .search {
+      width: 350px;
+
+      svg {
+        margin: auto var(--g-spacing-2);
+      }
+    }
+  }
 }
